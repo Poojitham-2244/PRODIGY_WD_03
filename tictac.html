@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="tictac.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Header Section -->
+        <header class="game-header">
+            <h1 class="game-title">Tic Tac Toe</h1>
+            <div class="game-mode">
+                <button class="mode-btn active" id="pvpBtn">Player vs Player</button>
+                <button class="mode-btn" id="pvcBtn">Player vs AI</button>
+            </div>
+        </header>
+
+        <!-- Game Info Section -->
+        <div class="game-info">
+            <div class="player-info">
+                <div class="player player-x">
+                    <span class="player-symbol">X</span>
+                    <span class="player-name" id="playerXName">Player 1</span>
+                </div>
+                <div class="vs-indicator">VS</div>
+                <div class="player player-o">
+                    <span class="player-symbol">O</span>
+                    <span class="player-name" id="playerOName">Player 2</span>
+                </div>
+            </div>
+            
+            <div class="game-status" id="gameStatus">Player 1's Turn</div>
+        </div>
+
+        <!-- Game Board -->
+        <div class="game-board" id="gameBoard">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <!-- Score Board -->
+        <div class="score-board">
+            <div class="score-item">
+                <span class="score-label">Player X</span>
+                <span class="score-value" id="scoreX">0</span>
+            </div>
+            <div class="score-item">
+                <span class="score-label">Draws</span>
+                <span class="score-value" id="scoreDraw">0</span>
+            </div>
+            <div class="score-item">
+                <span class="score-label">Player O</span>
+                <span class="score-value" id="scoreO">0</span>
+            </div>
+        </div>
+
+        <!-- Control Buttons -->
+        <div class="game-controls">
+            <button class="control-btn reset-btn" id="resetBtn">Reset Game</button>
+            <button class="control-btn new-game-btn" id="newGameBtn">New Game</button>
+        </div>
+    </div>
+
+    <!-- Win Overlay -->
+    <div class="win-overlay hidden" id="winOverlay">
+        <div class="win-content">
+            <div class="win-icon" id="winIcon">🎉</div>
+            <div class="win-message" id="winMessage">Player X Wins!</div>
+            <button class="play-again-btn" id="playAgainBtn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="tictac.js"></script>
+</body>
+</html>
